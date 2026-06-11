@@ -8,8 +8,8 @@ import { collectionItems } from "@/lib/data";
 
 export function FurnitureCollection() {
   return (
-    <section className="border-x border-black/10 bg-white">
-      <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-28">
+    <section className=" bg-white">
+      <div className="mx-auto max-w-[90vw] px-6 py-20 md:px-10 md:py-28 border-x border-black/10">
         <FadeIn>
           <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-black">
             Furniture Collection

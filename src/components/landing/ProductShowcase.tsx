@@ -21,7 +21,7 @@ export function ProductShowcase() {
     <motion.section
       id="products"
       ref={ref}
-      className="overflow-hidden border-x border-black/10"
+      className="overflow-hidden mx-auto max-w-[90vw] border-x border-black/10 "
       initial={{ opacity: 0, x: -60 }}
       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}

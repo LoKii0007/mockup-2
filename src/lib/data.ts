@@ -10,9 +10,9 @@ export const stats = [
 ] as const;
 
 export const projects = [
-  { title: "Restaurant", number: "01", image: "/images/gallery-mock.png" },
-  { title: "Living Room", number: "02", image: "/images/services-mock.png" },
-  { title: "Office Space", number: "03", image: "/images/bento-mock.png" },
+  { title: "Restaurant", number: "01", image: "/images/img-2.jpg" },
+  { title: "Living Room", number: "02", image: "/images/img-3.jpg" },
+  { title: "Office Space", number: "03", image: "/images/img-6.png" },
 ] as const;
 
 export const products = [
@@ -26,25 +26,25 @@ export const collectionItems = [
     name: "Modern Armchair",
     category: "Seating",
     price: "$1,240",
-    image: "/images/armchair-corner.png",
+    image: "/images/armchair-corner.jpg",
   },
   {
     name: "Workspace Sofa",
     category: "Living",
     price: "$2,890",
-    image: "/images/sofa-workspace.png",
+    image: "/images/sofa-workspace.jpg",
   },
   {
     name: "Dining Set",
     category: "Dining",
     price: "$3,450",
-    image: "/images/bento-mock.png",
+    image: "/images/img-6.png",
   },
   {
     name: "Kitchen Island",
     category: "Kitchen",
     price: "$4,200",
-    image: "/images/dining-kitchen.png",
+    image: "/images/dining-kitchen.jpg",
   },
 ] as const;
 

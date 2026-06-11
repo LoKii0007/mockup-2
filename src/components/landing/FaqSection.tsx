@@ -9,8 +9,8 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="border-x border-black/10 bg-white">
-      <div className="mx-auto max-w-[800px] px-6 py-20 md:px-10 md:py-28">
+    <section className="border-x border-black/10 bg-white mx-auto max-w-[90vw]">
+      <div className="mx-auto max-w-[50vw] min-w-[600px] px-6 py-20 md:px-10 md:py-28">
         <FadeIn>
           <h2 className="text-center text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-black">
             Your Question Answered
