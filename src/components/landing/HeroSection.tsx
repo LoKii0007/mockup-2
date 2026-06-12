@@ -66,7 +66,7 @@ export function HeroSection({ ready }: HeroSectionProps) {
 
               <motion.a
                 href="#about"
-                className="inline-flex rounded-full bg-black px-7 py-3 text-sm font-medium text-white hover:transition-all hover:scale-105"
+                className="inline-flex rounded-full bg-black px-7 py-3 md:m-2 text-sm font-medium text-white hover:transition-all hover:scale-105"
                 initial={{ opacity: 0, y: 40 }}
                 animate={ready && { opacity: 1, y: 0 }}
                 transition={{
@@ -106,12 +106,12 @@ export function HeroSection({ ready }: HeroSectionProps) {
           transition={{ duration: 2, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src={images.hero}
+            src={"/images/img-2.jpg"}
             alt="Modern living room interior"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center md:-translate-y-1/2"
             priority
-            sizes="(max-width: 1400px) 100vw, 1400px"
+            sizes="(max-width: 1400px) 100vw, 1400px "
           />
         </motion.div>
         <div className="flex flex-row absolute inset-0 z-20 w-full">
