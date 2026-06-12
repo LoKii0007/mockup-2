@@ -31,7 +31,7 @@ const itemVariants: Variants = {
 export function Header() {
   return (
     <header className="border-b border-black/10 fixed w-full top-0 z-50 bg-white">
-      <div className="mx-auto flex max-w-[90vw] items-center justify-between py-5 border-x border-black/10 overflow-hidden">
+      <div className="mx-auto flex max-w-[90vw] items-center justify-between px-4 py-4 sm:px-0 sm:py-5 border-x border-black/10 overflow-hidden">
 
         <motion.div
           variants={containerVariants}
@@ -66,7 +66,7 @@ export function Header() {
           <motion.a
             variants={itemVariants}
             href="#contact"
-            className="rounded-full border border-black px-5 py-2 text-xs font-medium tracking-wide text-black transition-colors hover:bg-black hover:text-white"
+            className="rounded-full border border-black px-4 py-1.5 sm:px-5 sm:py-2 text-[10px] sm:text-xs font-medium tracking-wide text-black transition-colors hover:bg-black hover:text-white"
           >
             CONTACT US
           </motion.a>

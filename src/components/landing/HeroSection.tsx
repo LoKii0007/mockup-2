@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { Header } from "./Header";
 import { images } from "@/lib/images";
 
 type HeroSectionProps = {
@@ -17,7 +16,6 @@ export function HeroSection({ ready }: HeroSectionProps) {
     offset: ["start start", "end start"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
   const isoY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
 
   const TABS = 16;
@@ -26,11 +24,11 @@ export function HeroSection({ ready }: HeroSectionProps) {
     <section
       id="home"
       ref={sectionRef}
-      className="relative bg-white grid grid-rows-2 h-screen overflow-hidden"
+      className="relative bg-white grid grid-rows-2 min-h-[100dvh] lg:min-h-0 lg:h-screen overflow-hidden"
     >
-      <div className="mx-auto max-w-[90vw] py-6 md:py-12 w-full border-x border-black/10">
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16 h-full">
-          <div className="max-w-xl flex flex-col justify-end pt-18.5 h-full col-span-6 text-[clamp(2.5rem,6vw,12rem)] font-bold leading-[1.05] tracking-tight text-black">
+      <div className="mx-auto max-w-[90vw] pt-20 pb-6 md:pt-24 md:pb-10 lg:py-12 w-full border-x border-black/10">
+        <div className="grid gap-6 sm:gap-10 lg:grid-cols-12 lg:items-end lg:gap-16 h-full">
+          <div className="max-w-xl flex flex-col justify-end pt-4 sm:pt-8 lg:pt-18.5 h-full lg:col-span-6 text-[clamp(2.5rem,11vw,12rem)] lg:text-[clamp(2.5rem,6vw,12rem)] font-bold leading-[1.05] tracking-tight text-black">
             <motion.h1
               initial={{ opacity: 0, y: 80 }}
               animate={ready && { opacity: 1, y: 0 }}
@@ -51,7 +49,7 @@ export function HeroSection({ ready }: HeroSectionProps) {
             </motion.h1>
           </div>
 
-          <div className=" gap-6 lg:pt-4 grid grid-cols-2 col-span-6">
+          <div className="gap-4 sm:gap-6 lg:pt-4 grid grid-cols-1 sm:grid-cols-2 lg:col-span-6">
             <div className="space-y-4 overflow-hidden">
               <div className="overflow-hidden">
                 <motion.p
@@ -102,8 +100,7 @@ export function HeroSection({ ready }: HeroSectionProps) {
 
       <div className="absolute w-full overflow-hidden shrink-0 top-1/2 flex justify-center items-center">
         <motion.div
-          className="relative aspect-[16/9] overflow-hidden z-10 w-screen h-auto"
-          // style={{ y: imageY }}
+          className="relative aspect-[16/9] overflow-hidden z-10 h-[50dvh] w-auto sm:w-screen sm:h-auto"
           initial={{ scale: 1.3 }}
           animate={ready && { scale: 1 }}
           transition={{ duration: 2, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}

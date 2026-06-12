@@ -58,7 +58,7 @@ export function LandingPage() {
       <Loader progress={progress} visible={loaderVisible} />
 
 
-      <main className="min-h-screen  bg-white font-sans text-black relative ">
+      <main className="min-h-screen bg-white font-sans text-black relative overflow-x-hidden">
         <HeroSection ready={ready} />
         <StatsSection />
         <PortfolioSection />

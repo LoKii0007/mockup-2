@@ -10,7 +10,7 @@ export function FaqSection() {
 
   return (
     <section className="border-x border-black/10 bg-white mx-auto max-w-[90vw]">
-      <div className="mx-auto max-w-[50vw] min-w-[600px] px-6 py-20 md:px-10 md:py-28">
+      <div className="mx-auto w-full max-w-full px-4 py-14 sm:px-6 sm:py-20 lg:max-w-[50vw] lg:min-w-[600px] lg:px-10 md:py-28">
         <FadeIn>
           <h2 className="text-center text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-black">
             Your Question Answered
@@ -31,8 +31,8 @@ export function FaqSection() {
         </div>
 
         <FadeIn delay={0.4} className="mt-10">
-          <div className="flex flex-col items-center justify-between gap-4 rounded-full bg-[#F0F0F0] px-6 py-4 sm:flex-row sm:px-8">
-            <p className="text-sm text-black/60">Have a different question</p>
+          <div className="flex flex-col items-center justify-between gap-4 rounded-full sm:bg-[#F0F0F0] px-6 py-4 sm:flex-row sm:px-8">
+            <p className="text-sm text-black/60 hidden sm:block">Have a different question</p>
             <a
               href="#contact"
               className="rounded-full bg-black px-6 py-2.5 text-sm font-medium text-white transition-transform hover:scale-105"

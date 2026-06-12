@@ -10,8 +10,8 @@ export function Footer() {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <footer id="contact" ref={ref} className="overflow-hidden border-x border-black/10 bg-white">
-      <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-20">
+    <footer id="contact" ref={ref} className="overflow-hidden bg-white">
+      <div className="mx-auto max-w-[90vw] py-12 sm:py-16 border-x border-black/10 md:py-20">
         <motion.div
           className="overflow-hidden"
           initial={{ opacity: 0, y: 80 }}
@@ -42,12 +42,12 @@ export function Footer() {
             ))}
           </motion.nav>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex gap-4">
             {socialLinks.map((link, i) => (
               <motion.a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-black/60 transition-colors hover:text-black"
+                className="text-sm text-end text-black/60 transition-colors hover:text-black"
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{

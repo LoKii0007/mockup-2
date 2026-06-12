@@ -21,7 +21,7 @@ export function ProductShowcase() {
     <motion.section
       id="products"
       ref={ref}
-      className="overflow-hidden mx-auto max-w-[90vw] border-x border-black/10 "
+      className="overflow-hidden mx-auto max-w-[90vw] border-x border-black/10 pt-10 sm:pt-[5vw]"
       initial={{ opacity: 0, x: -60 }}
       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
@@ -34,7 +34,7 @@ export function ProductShowcase() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <Image
-            src={images.productShowcase}
+            src={"/images/armchair-corner.jpg"}
             alt="Red curtains and blue sofa"
             fill
             className="object-cover"
@@ -42,9 +42,9 @@ export function ProductShowcase() {
           />
         </motion.div>
 
-        <div className="flex flex-col justify-center bg-black px-8 py-16 md:px-14 md:py-20">
+        <div className="flex flex-col justify-center px-6 py-12 sm:px-8 md:px-14 md:py-20">
           <motion.h2
-            className="text-[clamp(2rem,4vw,3rem)] font-bold leading-tight text-white"
+            className="text-[clamp(2rem,4vw,3rem)] font-bold leading-tight text-black"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -53,7 +53,7 @@ export function ProductShowcase() {
           </motion.h2>
 
           <motion.p
-            className="mt-4 max-w-md text-sm leading-relaxed text-white/60"
+            className="mt-4 max-w-md text-sm leading-relaxed text-black/60"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -78,14 +78,14 @@ export function ProductShowcase() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
-                    <Icon className="h-5 w-5 text-white" strokeWidth={1.5} />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
+                    <Icon className="h-5 w-5 text-black" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <p className="font-semibold text-white">{product.name}</p>
-                    <p className="text-xs text-white/40">{product.collections}</p>
+                    <p className="font-semibold text-black">{product.name}</p>
+                    <p className="text-xs text-black/40">{product.collections}</p>
                   </div>
-                  <ArrowRight className="h-4 w-4 text-white/40 transition-transform group-hover:translate-x-1 group-hover:text-white" />
+                  <ArrowRight className="h-4 w-4 text-black/40 transition-transform group-hover:translate-x-1 group-hover:text-black" />
                 </motion.a>
               );
             })}

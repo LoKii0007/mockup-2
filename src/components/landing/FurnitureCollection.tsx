@@ -9,7 +9,7 @@ import { collectionItems } from "@/lib/data";
 export function FurnitureCollection() {
   return (
     <section className=" bg-white">
-      <div className="mx-auto max-w-[90vw] px-6 py-20 md:px-10 md:py-28 border-x border-black/10">
+      <div className="mx-auto max-w-[90vw] py-14 sm:py-20 md:py-28 border-x border-black/10">
         <FadeIn>
           <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-black">
             Furniture Collection
@@ -73,10 +73,12 @@ function CollectionCard({
           />
         </motion.div>
       </div>
-      <div className="mt-4">
-        <p className="text-xs text-black/40">{category}</p>
-        <p className="mt-1 font-medium text-black">{name}</p>
-        <p className="mt-1 text-sm text-black/60">{price}</p>
+      <div className="mt-4 px-1 flex justify-between items-end">
+        <p className="mt-1 text-2xl font-semibold text-black">{price}</p>
+        <div>
+          <p className="mt-1 font-medium text-black/60">{name}</p>
+          <p className="text-xs text-end text-black/40">{category}</p>
+        </div>
       </div>
     </motion.div>
   );
