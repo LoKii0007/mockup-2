@@ -1,12 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import {
-  motion,
-  useInView,
-  useScroll,
-  useTransform,
-} from "motion/react";
+import { motion, useInView, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { FadeIn } from "./FadeIn";
 import { projects } from "@/lib/data";
@@ -29,7 +24,6 @@ export function PortfolioSection() {
       ref={sectionRef}
       className="relative overflow-visible  bg-white relative min-h-screen"
     >
-
       <div className="absolute z-10 inset-0 w-full h-full">
         <motion.div
           className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[520px] h-full"
@@ -44,10 +38,11 @@ export function PortfolioSection() {
           <div className="absolute inset-0 bg-black/30" />
           <div className="absolute inset-0 flex flex-col mx-auto max-w-[90vw] py-8 md:py-12">
             <FadeIn delay={0.2}>
-              <h3 className="max-w-sm text-[clamp(2rem,4vw,3.5rem)] font-bold leading-tight text-white">
-                Where Style
+              <h3 className=" text-[6rem] font-bold leading-tight text-white">
+                Where <br />
+                Style Meets
                 <br />
-                Meets Function
+                Function
               </h3>
               <a
                 href="#products"
@@ -61,7 +56,6 @@ export function PortfolioSection() {
       </div>
 
       <div className="border-x border-black/10 mx-auto max-w-[90vw] z-20 relative">
-
         <div className="relative mx-auto max-w-[90vw] py-6 md:py-10">
           <div className="grid gap-6 lg:grid-cols-12 lg:gap-8">
             <motion.div

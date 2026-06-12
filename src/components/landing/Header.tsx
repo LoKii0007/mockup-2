@@ -30,7 +30,7 @@ const itemVariants: Variants = {
 
 export function Header() {
   return (
-    <header className="border-b border-black/10 sticky top-0 z-50 bg-white">
+    <header className="border-b border-black/10 fixed w-full top-0 z-50 bg-white">
       <div className="mx-auto flex max-w-[90vw] items-center justify-between py-5 border-x border-black/10 overflow-hidden">
 
         <motion.div

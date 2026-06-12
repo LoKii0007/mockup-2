@@ -8,6 +8,7 @@ type FadeInProps = {
   className?: string;
   delay?: number;
   y?: number;
+  x?: number;
   once?: boolean;
 };
 
@@ -16,6 +17,7 @@ export function FadeIn({
   className = "",
   delay = 0,
   y = 50,
+  x = 0,
   once = true,
 }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,7 +28,7 @@ export function FadeIn({
       ref={ref}
       className={className}
       initial={{ opacity: 0, y }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y }}
+      animate={inView ? { opacity: 1, y: 0, x: 0 } : { opacity: 0, y, x }}
       transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
